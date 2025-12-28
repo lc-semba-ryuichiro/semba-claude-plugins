@@ -18,7 +18,7 @@ config:
           - ".github/**/*"
           - "!.github/workflows/**/*"
           - "biome.json"
-          - ".remarkrc.mjs"
+          - ".remarkrc"
           - ".textlintrc.json"
           - "commitlint.config.mjs"
           - "lefthook.yml"
