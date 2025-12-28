@@ -1,0 +1,37 @@
+{
+  "name": "semba-claude-plugins",
+  "version": "1.0.0",
+  "description": "自前の Claude Code の Plugin 管理リポジトリ",
+  "scripts": {
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "pnpm lint:biome && pnpm lint:yaml && pnpm lint:actions",
+    "lint:biome": "biome check .",
+    "lint:yaml": "mise exec -- yamllint .",
+    "lint:actions": "mise exec -- actionlint && mise exec -- ghalint run && mise exec -- zizmor .",
+    "lint:fix": "biome check --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ryuichiro Semba",
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.2",
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "lefthook": "catalog:",
+    "remark": "catalog:",
+    "remark-cli": "catalog:",
+    "remark-frontmatter": "catalog:",
+    "remark-gfm": "catalog:",
+    "remark-lint": "catalog:",
+    "remark-preset-lint-consistent": "catalog:",
+    "remark-preset-lint-recommended": "catalog:",
+    "remark-toc": "catalog:",
+    "textlint": "catalog:",
+    "textlint-filter-rule-allowlist": "catalog:",
+    "textlint-filter-rule-comments": "catalog:",
+    "textlint-rule-preset-ja-technical-writing": "catalog:"
+  }
+}
