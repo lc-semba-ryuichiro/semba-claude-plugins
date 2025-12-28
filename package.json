@@ -1,26 +1,6 @@
 {
-  "name": "semba-claude-plugins",
-  "version": "1.0.0",
-  "description": "自前の Claude Code の Plugin 管理リポジトリ",
-  "scripts": {
-    "format": "biome format --write .",
-    "format:check": "biome format .",
-    "lint": "pnpm lint:biome && pnpm lint:yaml && pnpm lint:actions",
-    "lint:biome": "biome check .",
-    "lint:yaml": "mise exec -- yamllint .",
-    "lint:actions": "mise exec -- actionlint && mise exec -- ghalint run && mise exec -- zizmor .",
-    "lint:remark": "remark . --frail",
-    "lint:remark:fix": "remark . --frail --output",
-    "lint:textlint": "textlint .",
-    "lint:textlint:fix": "textlint --fix .",
-    "lint:secretlint": "secretlint .",
-    "lint:fix": "biome check --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "Ryuichiro Semba",
-  "license": "MIT",
-  "packageManager": "pnpm@10.26.2",
+  "description": "自前の Claude Code の Plugin 管理リポジトリ",
   "devDependencies": {
     "@biomejs/biome": "catalog:",
     "@commitlint/cli": "catalog:",
@@ -44,5 +24,25 @@
     "textlint-rule-preset-ja-spacing": "catalog:",
     "textlint-rule-preset-ja-technical-writing": "catalog:",
     "textlint-rule-prh": "catalog:"
-  }
+  },
+  "keywords": [],
+  "license": "MIT",
+  "name": "semba-claude-plugins",
+  "packageManager": "pnpm@10.26.2",
+  "scripts": {
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "pnpm lint:biome && pnpm lint:yaml && pnpm lint:actions",
+    "lint:actions": "mise exec -- actionlint && mise exec -- ghalint run && mise exec -- zizmor .",
+    "lint:biome": "biome check .",
+    "lint:fix": "biome check --write .",
+    "lint:remark": "remark . --frail",
+    "lint:remark:fix": "remark . --frail --output",
+    "lint:secretlint": "secretlint .",
+    "lint:textlint": "textlint .",
+    "lint:textlint:fix": "textlint --fix .",
+    "lint:yaml": "mise exec -- yamllint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }

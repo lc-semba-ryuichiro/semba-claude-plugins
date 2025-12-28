@@ -8,10 +8,10 @@
   },
   "rules": {
     "@textlint-ja/preset-ai-writing": true,
+    "preset-ja-spacing": true,
     "preset-ja-technical-writing": {
       "no-exclamation-question-mark": false
     },
-    "preset-ja-spacing": true,
     "prh": {
       "rulePaths": ["./prh.yml"]
     }

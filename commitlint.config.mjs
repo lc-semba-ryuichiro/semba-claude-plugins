@@ -1,6 +1,9 @@
 export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
+    'body-max-line-length': [2, 'always', 100],
+    'subject-case': [0], // 固有名詞（Phase, Storybook など）を許可
+    'subject-max-length': [2, 'always', 72],
     'type-enum': [
       2,
       'always',
@@ -18,8 +21,5 @@ export default {
         'revert', // コミットの取り消し
       ],
     ],
-    'subject-case': [0], // 固有名詞（Phase, Storybook など）を許可
-    'subject-max-length': [2, 'always', 72],
-    'body-max-line-length': [2, 'always', 100],
   },
 };
