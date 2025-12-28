@@ -9,6 +9,11 @@
     "lint:biome": "biome check .",
     "lint:yaml": "mise exec -- yamllint .",
     "lint:actions": "mise exec -- actionlint && mise exec -- ghalint run && mise exec -- zizmor .",
+    "lint:remark": "remark . --frail",
+    "lint:remark:fix": "remark . --frail --output",
+    "lint:textlint": "textlint .",
+    "lint:textlint:fix": "textlint --fix .",
+    "lint:secretlint": "secretlint .",
     "lint:fix": "biome check --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +25,9 @@
     "@biomejs/biome": "catalog:",
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
+    "@secretlint/secretlint-rule-preset-recommend": "catalog:",
+    "@textlint-ja/textlint-rule-preset-ai-writing": "catalog:",
+    "@textlint/textlint-plugin-markdown": "catalog:",
     "lefthook": "catalog:",
     "remark": "catalog:",
     "remark-cli": "catalog:",
@@ -29,9 +37,12 @@
     "remark-preset-lint-consistent": "catalog:",
     "remark-preset-lint-recommended": "catalog:",
     "remark-toc": "catalog:",
+    "secretlint": "catalog:",
     "textlint": "catalog:",
     "textlint-filter-rule-allowlist": "catalog:",
     "textlint-filter-rule-comments": "catalog:",
-    "textlint-rule-preset-ja-technical-writing": "catalog:"
+    "textlint-rule-preset-ja-spacing": "catalog:",
+    "textlint-rule-preset-ja-technical-writing": "catalog:",
+    "textlint-rule-prh": "catalog:"
   }
 }
