@@ -6,9 +6,9 @@ draw\.io（diagrams.net）のXML形式で高品質な図を作成するClaude Co
 
 - [機能](#機能)
 - [インストール](#インストール)
-  - [方法1: プロジェクトローカル（推奨）](#方法1-プロジェクトローカル推奨)
-  - [方法2: ユーザーグローバル](#方法2-ユーザーグローバル)
-  - [方法3: Claude Code起動時に指定](#方法3-claude-code起動時に指定)
+  - [方法1: マーケットプレースからインストール（推奨）](#方法1-マーケットプレースからインストール推奨)
+  - [方法2: インタラクティブUIでインストール](#方法2-インタラクティブuiでインストール)
+  - [方法3: チーム設定で自動化](#方法3-チーム設定で自動化)
 - [使い方](#使い方)
   - [コマンド: `/diagram-drawio`](#コマンド-diagram-drawio)
   - [スキル自動起動](#スキル自動起動)
@@ -31,24 +31,43 @@ draw\.io（diagrams.net）のXML形式で高品質な図を作成するClaude Co
 
 ## インストール
 
-### 方法1: プロジェクトローカル（推奨）
+### 方法1: マーケットプレースからインストール（推奨）
 
-```bash
-# プロジェクトにプラグインをコピー
-cp -r plugins/diagram-drawio /path/to/your-project/.claude-plugin/
+```shell
+# マーケットプレースを追加
+/plugin marketplace add lc-semba-ryuichiro/semba-claude-plugins
+
+# プラグインをインストール
+/plugin install diagram-drawio@semba-claude-plugins
 ```
 
-### 方法2: ユーザーグローバル
+### 方法2: インタラクティブUIでインストール
 
-```bash
-# ユーザーのプラグインディレクトリにコピー
-cp -r plugins/diagram-drawio ~/.claude/plugins/
+```shell
+/plugin
 ```
 
-### 方法3: Claude Code起動時に指定
+1. **Marketplaces**タブで `lc-semba-ryuichiro/semba-claude-plugins` を追加
+2. **Discover**タブで `diagram-drawio` を選択してインストール
 
-```bash
-claude --plugin-dir /path/to/plugins/diagram-drawio
+### 方法3: チーム設定で自動化
+
+プロジェクトの `.claude/settings.json` に以下を追加すると、チームメンバーに自動でプラグインのインストールを促せます。
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "semba-claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "lc-semba-ryuichiro/semba-claude-plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "diagram-drawio@semba-claude-plugins": true
+  }
+}
 ```
 
 ## 使い方
@@ -81,7 +100,7 @@ claude --plugin-dir /path/to/plugins/diagram-drawio
 
 ### ファイル保存
 
-```
+```text
 output/
 └── authentication-flow.drawio
 ```
