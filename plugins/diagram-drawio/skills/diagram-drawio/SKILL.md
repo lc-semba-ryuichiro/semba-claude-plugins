@@ -137,8 +137,13 @@ Sequence図（処理フロー）
 
 **推奨フォント:**
 
-- 日本語: `Hiragino Sans`, `Noto Sans JP`, `Yu Gothic`
-- 英語: `Helvetica`, `Arial`
+| OS                | 日本語フォント         | 英語フォント      |
+| ----------------- | --------------- | ----------- |
+| macOS             | `Hiragino Sans` | `Helvetica` |
+| Windows           | `Yu Gothic`     | `Arial`     |
+| Linux/クロスプラットフォーム | `Noto Sans JP`  | `Noto Sans` |
+
+draw\.ioでPNG出力する際、ユーザーのOSに対応するフォントを使用してください。
 
 ### 2. 矢印の配置（背面配置）
 

@@ -7,6 +7,7 @@ allowed-tools:
   - Write
   - Glob
   - Grep
+  - Bash
 ---
 
 # draw\.io図作成コマンド
