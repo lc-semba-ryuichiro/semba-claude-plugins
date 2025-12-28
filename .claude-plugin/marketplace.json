@@ -1,0 +1,18 @@
+{
+  "name": "semba-claude-plugins",
+  "description": "Ryuichiro Semba のプラグインマーケットプレース",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "id": "diagram-drawio",
+      "name": "diagram-drawio",
+      "version": "1.0.0",
+      "description": "draw.io（diagrams.net）のXML形式で高品質な図を作成するプラグイン",
+      "path": "./plugins/diagram-drawio",
+      "author": {
+        "name": "Ryuichiro Semba"
+      },
+      "keywords": ["draw.io", "diagrams", "flowchart", "architecture", "sequence-diagram", "xml"]
+    }
+  ]
+}

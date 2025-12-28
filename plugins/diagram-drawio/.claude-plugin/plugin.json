@@ -1,0 +1,10 @@
+{
+  "name": "diagram-drawio",
+  "version": "1.0.0",
+  "description": "draw.io（diagrams.net）のXML形式で高品質な図を作成するプラグイン。フローチャート、シーケンス図、アーキテクチャ図などに対応。",
+  "author": {
+    "name": "Ryuichiro Semba"
+  },
+  "license": "MIT",
+  "keywords": ["draw.io", "diagrams", "flowchart", "architecture", "sequence-diagram", "xml"]
+}
