@@ -1,0 +1,67 @@
+name: 新規プラグイン提案
+description: 新しいプラグインのアイデアを提案する
+title: "[Plugin Proposal]: "
+labels: ["proposal", "plugin"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        新規プラグインの提案ありがとうございます。
+        プラグインの具体的な機能とユースケースを記載してください。
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: プラグイン名
+      description: 提案するプラグインの名前（例：diagram-mermaid）
+      placeholder: 例：my-awesome-plugin
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: プラグインの目的と主な機能を説明してください
+      placeholder: 例：Mermaid 記法を使って様々な図を生成するプラグイン
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: features
+    attributes:
+      label: 提供する機能
+      description: このプラグインで提供する機能を選択してください
+      options:
+        - label: commands（スラッシュコマンド）
+        - label: skills（スキル）
+        - label: agents（エージェント）
+        - label: hooks（フック）
+
+  - type: textarea
+    id: usecase
+    attributes:
+      label: ユースケース
+      description: どのような場面でこのプラグインが役立つか説明してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 類似ツール・参考情報
+      description: 参考になる既存のツールやドキュメントがあれば記載してください
+    validations:
+      required: false
+
+  - type: dropdown
+    id: implementation
+    attributes:
+      label: 実装意向
+      description: このプラグインの実装についてどのように考えていますか？
+      options:
+        - 自分で実装して PR を出す予定
+        - 実装してほしい
+        - 未定 / 議論したい
+    validations:
+      required: true

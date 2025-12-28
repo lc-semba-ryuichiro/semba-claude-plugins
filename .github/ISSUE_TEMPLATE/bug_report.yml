@@ -1,0 +1,80 @@
+name: バグ報告
+description: プラグインの動作不具合や問題を報告する
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。
+        できるだけ詳細に記入していただけると、問題の特定と修正がスムーズになります。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: バグの概要
+      description: どのような問題が発生していますか？
+      placeholder: 例：diagram-drawio コマンドを実行するとエラーが発生する
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順を記載してください
+      placeholder: |
+        1. Claude Code を起動
+        2. /diagram-drawio コマンドを実行
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される動作
+      description: 本来どのように動作すべきですか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      description: 実際にはどのように動作しましたか？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: 対象プラグイン
+      description: 問題が発生しているプラグインを選択してください
+      options:
+        - diagram-drawio
+        - その他 / 不明
+        - 全体（marketplace など）
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: |
+        OS、Claude Code のバージョンなどを記載してください
+      placeholder: |
+        - OS: macOS 14.0
+        - Claude Code: v1.0.0
+        - Node.js: v20.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 問題を説明するスクリーンショットがあれば添付してください
+    validations:
+      required: false

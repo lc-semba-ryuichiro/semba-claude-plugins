@@ -1,0 +1,47 @@
+name: 質問
+description: 使い方や開発方法について質問する
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご質問ありがとうございます。
+        できるだけ具体的に記載していただけると、回答がスムーズになります。
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 質問カテゴリ
+      description: 質問の種類を選択してください
+      options:
+        - 使い方（プラグインの利用方法）
+        - 開発方法（プラグインの作成方法）
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 質問を具体的に記載してください
+      placeholder: 例：diagram-drawio プラグインで AWS アイコンを使用するにはどうすればよいですか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 試したこと
+      description: 質問の前に試したことがあれば記載してください
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 関連情報
+      description: 参考になるドキュメントやリンクがあれば記載してください
+    validations:
+      required: false

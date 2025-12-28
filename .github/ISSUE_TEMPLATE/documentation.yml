@@ -1,0 +1,53 @@
+name: ドキュメント改善
+description: ドキュメントの誤りや不明確な点を報告する
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ドキュメントに関するフィードバックありがとうございます。
+        より良いドキュメント作成のため、具体的な問題点と改善案を記載してください。
+
+  - type: checkboxes
+    id: target
+    attributes:
+      label: 対象ドキュメント
+      description: 問題があるドキュメントを選択してください（複数選択可）
+      options:
+        - label: README.md
+        - label: CONTRIBUTING.md
+        - label: CHANGELOG.md
+        - label: CLAUDE.md
+        - label: プラグインの README
+        - label: その他
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 問題の種類
+      description: どのような問題がありますか？
+      options:
+        - 誤り（内容が間違っている）
+        - 不明確（説明がわかりにくい）
+        - 不足（情報が足りない）
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題の詳細
+      description: 具体的にどこにどのような問題がありますか？
+      placeholder: 例：README.md のインストール手順で、pnpm のバージョン要件が記載されていない
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 修正案
+      description: どのように修正すべきか提案があれば記載してください
+    validations:
+      required: false
