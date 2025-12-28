@@ -361,8 +361,8 @@
 図にはメタデータを含めることを推奨する。
 
 ```xml
-<mxfile host="app.diagrams.net" modified="2025-01-15T10:00:00.000Z" agent="Claude Code" version="1.0">
-  <diagram name="システム構成図 - v1.0 - 2025-01-15" id="system-arch-v1">
+<mxfile host="app.diagrams.net" modified="YYYY-MM-DDTHH:MM:SS.000Z" agent="Claude Code" version="1.0">
+  <diagram name="システム構成図 - v1.0 - YYYY-MM-DD" id="system-arch-v1">
     <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" defaultFontFamily="Hiragino Sans">
       <root>
         <mxCell id="0"/>
@@ -378,8 +378,8 @@
 
 | 属性       | 説明                  | 例                             |
 | -------- | ------------------- | ----------------------------- |
-| name     | 図のタイトル + バージョン + 日付 | `システム構成図 - v1.0 - 2025-01-15` |
-| modified | 最終更新日時（ISO 8601）    | `2025-01-15T10:00:00.000Z`    |
+| name     | 図のタイトル + バージョン + 日付 | `システム構成図 - v1.0 - YYYY-MM-DD` |
+| modified | 最終更新日時（ISO 8601）    | `YYYY-MM-DDTHH:MM:SS.000Z`    |
 | agent    | 作成ツール               | `Claude Code`                 |
 | version  | 図のバージョン             | `1.0`                         |
 

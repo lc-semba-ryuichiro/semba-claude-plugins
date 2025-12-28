@@ -106,7 +106,9 @@ diagram-drawio/
 │   └── diagram-drawio/
 │       ├── SKILL.md         # draw.io図作成スキル
 │       └── references/
-│           └── xml-templates.md  # XMLテンプレート集
+│           ├── aws-icons.md         # AWSアイコン定義
+│           ├── design-principles.md # 設計原則
+│           └── xml-templates.md     # XMLテンプレート集
 └── README.md
 ```
 

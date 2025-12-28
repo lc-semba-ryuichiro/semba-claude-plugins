@@ -12,7 +12,7 @@
       "author": {
         "name": "Ryuichiro Semba"
       },
-      "keywords": ["draw.io", "diagrams", "flowchart", "architecture"]
+      "keywords": ["draw.io", "diagrams", "flowchart", "architecture", "sequence-diagram", "xml"]
     }
   ]
 }
