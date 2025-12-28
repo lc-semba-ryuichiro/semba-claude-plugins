@@ -1,14 +1,17 @@
 {
   "name": "semba-claude-plugins",
-  "description": "Ryuichiro Semba のプラグインマーケットプレース",
   "version": "1.0.0",
+  "description": "Ryuichiro Semba のプラグインマーケットプレース",
+  "owner": {
+    "name": "Ryuichiro Semba"
+  },
   "plugins": [
     {
-      "id": "diagram-drawio",
       "name": "diagram-drawio",
+      "source": "./plugins/diagram-drawio",
+      "category": "productivity",
       "version": "1.0.0",
       "description": "draw.io（diagrams.net）のXML形式で高品質な図を作成するプラグイン",
-      "path": "./plugins/diagram-drawio",
       "author": {
         "name": "Ryuichiro Semba"
       },
