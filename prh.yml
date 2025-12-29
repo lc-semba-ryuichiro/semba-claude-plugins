@@ -13,9 +13,6 @@ rules:
   - expected: すべて
     patterns:
       - 全て
-  - expected: ところ
-    patterns:
-      - /所(?![属有在長定持])/
   - expected: さまざま
     patterns:
       - 様々
