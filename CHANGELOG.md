@@ -8,10 +8,25 @@
 ## 目次
 
 - [Unreleased](#unreleased)
-- [1.0.0 - 2025-12-29](#100---2025-12-29)
+- [1.1.0 - 2026-01-02](#110---2026-01-02)
   - [Added](#added)
+- [1.0.0 - 2025-12-29](#100---2025-12-29)
+  - [Added](#added-1)
 
 ## [Unreleased][]
+
+## [1.1.0][] - 2026-01-02
+
+### Added
+
+#### プラグイン
+
+- webpify: PNG/JPEG/GIF画像をWebP形式に変換するプラグイン
+  - `/webpify` スラッシュコマンドによる画像変換
+  - `/webpify:list` コマンドによるWebPファイル一覧表示（`-r`オプションで再帰検索対応）
+  - image-optimizerエージェントによる画像の最適化
+  - スキルによる自動起動対応
+  - 品質設定ガイド（ユースケース別推奨設定）付属
 
 ## [1.0.0][] - 2025-12-29
 
@@ -52,6 +67,8 @@
 - CODE\_OF\_CONDUCT.md: 行動規範
 - CLAUDE.md: Claude Code開発ガイド
 
-[Unreleased]: https://github.com/lc-semba-ryuichiro/semba-claude-plugins/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/lc-semba-ryuichiro/semba-claude-plugins/compare/v1.1.0...HEAD
+
+[1.1.0]: https://github.com/lc-semba-ryuichiro/semba-claude-plugins/compare/v1.0.0...v1.1.0
 
 [1.0.0]: https://github.com/lc-semba-ryuichiro/semba-claude-plugins/releases/tag/v1.0.0

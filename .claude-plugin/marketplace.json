@@ -15,7 +15,18 @@
       "name": "diagram-drawio",
       "source": "./plugins/diagram-drawio",
       "version": "1.0.0"
+    },
+    {
+      "author": {
+        "name": "Ryuichiro Semba"
+      },
+      "category": "productivity",
+      "description": "PNG/JPEG/GIF 画像を WebP 形式に変換するプラグイン",
+      "keywords": ["webpify", "webp", "image", "optimization", "conversion", "png", "jpeg", "gif"],
+      "name": "webpify",
+      "source": "./plugins/webpify",
+      "version": "1.0.0"
     }
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
