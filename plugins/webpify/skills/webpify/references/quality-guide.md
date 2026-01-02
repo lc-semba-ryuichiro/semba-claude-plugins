@@ -1,0 +1,186 @@
+# 品質設定ガイド
+
+webpifyの品質設定（`-q` オプション）に関する詳細ガイド。
+
+## 品質レベルの概要
+
+品質は1-100の範囲で指定する。数値が高いほど高品質だがファイルサイズも大きくなる。
+
+| 品質範囲   | 用途        | ファイルサイズ削減率目安 |
+| ------ | --------- | ------------ |
+| 90-100 | 高品質が必須な画像 | 20-40%       |
+| 70-85  | バランス重視    | 40-60%       |
+| 50-70  | サイズ優先     | 60-75%       |
+| 30-50  | サムネイルなど   | 75-85%       |
+
+***
+
+## ユースケース別推奨設定
+
+### ポートフォリオ・製品画像（品質 90-100）
+
+視覚的品質を最優先する場合に使用。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./product-images -q 100
+```
+
+**適用例:**
+
+- 写真家のポートフォリオ
+- ECサイトの商品画像
+- ブランドの公式画像
+- 印刷にも使用する可能性がある画像
+
+### 一般的な Web コンテンツ（品質 70-85）
+
+ほとんどのWebサイトに適したバランス設定。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./content-images -q 80
+```
+
+**適用例:**
+
+- ブログ記事の画像
+- ニュースサイトの記事画像
+- ドキュメントの挿絵
+- SNS共有用画像
+
+### サムネイル・背景・アイコン（品質 50-70）
+
+ファイルサイズを優先する場合。小さく表示される画像に適している。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./thumbnails -q 60
+```
+
+**適用例:**
+
+- 記事一覧のサムネイル
+- ギャラリーのプレビュー画像
+- 背景パターン
+- UIアイコン（写真ベース）
+
+### lossless（可逆圧縮）モード
+
+元の画像データをそのまま保持する。`--lossless`オプションで指定する。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./originals --lossless
+```
+
+**適用例:**
+
+- 画像アーカイブ
+- 原本の保存
+- PNGからの変換（品質劣化なし）
+- 画質を一切落としたくない場合
+
+**注意点:**
+
+- ファイルサイズは元より大きくなる場合がある（特にJPEGからの変換時）
+- `--quality`オプションと同時に指定すると、警告を表示してlosslessを優先する
+
+***
+
+## 画像タイプ別の考慮事項
+
+### 写真
+
+写真は品質低下が目立ちやすい。品質75以上を推奨。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./photos -q 80
+```
+
+### イラスト・グラフィック
+
+シャープなエッジを持つ画像では圧縮アーティファクトが目立ちやすい。品質85以上を推奨。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./illustrations -q 85
+```
+
+### スクリーンショット
+
+テキストを含む画像は品質を高めに設定。品質85-95を推奨。
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./screenshots -q 90
+```
+
+***
+
+## 品質テストのワークフロー
+
+最適な品質設定を見つけるためのワークフロー。
+
+### 1. サンプル画像で複数品質をテスト
+
+```bash
+# 複数の品質レベルで変換
+npx @semba-ryuichiro/webpify@latest sample.png -q 100 -o ./test/q100
+npx @semba-ryuichiro/webpify@latest sample.png -q 85 -o ./test/q85
+npx @semba-ryuichiro/webpify@latest sample.png -q 70 -o ./test/q70
+```
+
+### 2. ファイルサイズを比較
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./test --list
+```
+
+### 3. 視覚的に確認
+
+ブラウザや画像ビューアで開き、許容できる品質レベルを判断する。
+
+### 4. 本番適用
+
+```bash
+npx @semba-ryuichiro/webpify@latest ./images -q [選択した品質] -f
+```
+
+***
+
+## バッチ処理での品質戦略
+
+### ディレクトリ構造で分ける
+
+```bash
+# 製品画像は高品質
+npx @semba-ryuichiro/webpify@latest ./assets/products -q 95
+
+# ブログ画像は中品質
+npx @semba-ryuichiro/webpify@latest ./assets/blog -q 80
+
+# サムネイルは低品質
+npx @semba-ryuichiro/webpify@latest ./assets/thumbnails -q 60
+```
+
+### CI/CD での一括処理
+
+```bash
+# ビルド時に一括変換
+npx @semba-ryuichiro/webpify@latest ./public/images -r -q 80 -f --quiet
+```
+
+***
+
+## よくある質問
+
+### Q: デフォルト品質 100 のままで良いか？
+
+A: 多くの場合、品質80-85で十分。品質100はロスレスに近いがファイルサイズが大きい。
+
+### Q: 品質を下げすぎるとどうなるか？
+
+A: ブロックノイズやぼやけが発生する。特にエッジ部分やグラデーションで顕著。
+
+### Q: lossless モードと quality 100 の違いは？
+
+A: quality 100は高品質だが非可逆圧縮（lossy）で、わずかな品質劣化がある。losslessモードは元データをそのまま保持するが、ファイルサイズは大きくなりやすい。
+
+### Q: lossless モードはいつ使うべきか？
+
+A: 原本の保存、アーカイブ、画質劣化を一切許容できない場合に使用する。ファイルサイズより画質を最優先する場合に適している。

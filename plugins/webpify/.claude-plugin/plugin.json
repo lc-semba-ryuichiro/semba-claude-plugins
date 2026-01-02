@@ -1,0 +1,10 @@
+{
+  "author": {
+    "name": "Ryuichiro Semba"
+  },
+  "description": "PNG/JPEG/GIF 画像を WebP 形式に変換するプラグイン。webpify CLI を活用した画像最適化を支援。",
+  "keywords": ["webpify", "webp", "image", "optimization", "conversion", "png", "jpeg", "gif"],
+  "license": "MIT",
+  "name": "webpify",
+  "version": "1.0.0"
+}
