@@ -26,7 +26,18 @@
       "name": "webpify",
       "source": "./plugins/webpify",
       "version": "1.0.0"
+    },
+    {
+      "author": {
+        "name": "Ryuichiro Semba"
+      },
+      "category": "productivity",
+      "description": "Atlassian Cloud (Jira / Confluence) の情報を取得するプラグイン",
+      "keywords": ["atlassian", "jira", "confluence", "fetch", "issue", "wiki"],
+      "name": "atl-fetch",
+      "source": "./plugins/atl-fetch",
+      "version": "1.0.0"
     }
   ],
-  "version": "1.1.0"
+  "version": "1.2.0"
 }

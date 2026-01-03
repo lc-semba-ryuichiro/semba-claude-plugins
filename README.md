@@ -29,9 +29,11 @@ Claude Codeプラグインを管理するリポジトリ。
 
 ## 利用可能なプラグイン
 
-| プラグイン名                                     | 説明                         |
-| ------------------------------------------ | -------------------------- |
-| [diagram-drawio](./plugins/diagram-drawio) | draw\.io の XML 形式で高品質な図を作成 |
+| プラグイン名                                     | 説明                                         |
+| ------------------------------------------ | ------------------------------------------ |
+| [atl-fetch](./plugins/atl-fetch)           | Atlassian Cloud (Jira / Confluence) の情報を取得 |
+| [diagram-drawio](./plugins/diagram-drawio) | draw\.io の XML 形式で高品質な図を作成                 |
+| [webpify](./plugins/webpify)               | PNG/JPEG/GIF 画像を WebP 形式に変換                |
 
 ## インストール
 
