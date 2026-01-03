@@ -29,19 +29,19 @@ PNG/JPEG/GIF画像をWebP形式に変換するためのClaude Codeプラグイ�
 
 ### 画像変換
 
-```
+```text
 /webpify ./images -q 80
 ```
 
 ### WebP ファイル一覧
 
-```
+```text
 /webpify:list ./images
 ```
 
 ### 画像最適化（エージェント）
 
-```
+```text
 画像を最適化して
 ```
 

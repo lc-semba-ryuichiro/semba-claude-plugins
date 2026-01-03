@@ -1,0 +1,10 @@
+{
+  "author": {
+    "name": "Ryuichiro Semba"
+  },
+  "description": "Atlassian Cloud (Jira / Confluence) の情報を取得するプラグイン",
+  "keywords": ["atlassian", "jira", "confluence", "fetch", "issue", "wiki"],
+  "license": "MIT",
+  "name": "atl-fetch",
+  "version": "1.0.0"
+}
